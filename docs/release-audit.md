@@ -18,7 +18,16 @@
 - Two independent runs: original inputs unmodified, earlier output retained.
 - Spreadsheet import and inspection: README, Summary, Detailed Extraction, supplier views, Account Rules.
 
+## GitHub private staging and Windows validation — 2026-11-13
+- Sanitized showcase uploaded to the private repository `ericgalvezz/supplier-document-automation`.
+- File tree, synthetic fixtures, demo Excel, README image links and Git attributes checked after push.
+- `.gitattributes` corrected and verified in the repository.
+- User ran the installer successfully on Windows 11 with Python 3.13.
+- User ran the batch extractor twice on the seven fictional fixtures. Second CMD run reported **7 input / 5 successful / 1 manual review / 1 intentional failure**.
+- Windows Explorer confirmed two preserved run folders; user verified workbook and output-folder content.
+- Screenshots were provided privately for validation, not included as public repository assets.
+
 ## Remaining release gates
-- Windows `.bat` files were reviewed but **not executable-tested on Windows** here.
+- Windows `.bat` smoke testing is **complete** for the tested Windows 11 setup; additional platform combinations are untested.
 - Final human review of disclosure and choice of code license.
-- No private GitHub repository created during local artifact preparation.
+- Private GitHub staging is **complete**; public visibility has **not** been enabled.
