@@ -47,7 +47,7 @@ The included synthetic fixture set contains **7 PDFs**, including an image-only 
 | Deliberate technical failure | **1** |
 | Data/control columns | **34** |
 
-**These are demo-fixture outcomes, not an estimated production automation rate.** See [validation notes](docs/validation-results.md).
+**These are demo-fixture outcomes, not an estimated production automation rate.** The synthetic workflow was also smoke-tested successfully on Windows 11 with Python 3.13, including two preserved runs. See [validation notes](docs/validation-results.md).
 
 ## Try the working tool
 
@@ -108,4 +108,4 @@ The current tool reads PDF text layers; **it does not perform OCR**. Supplier al
 
 **Technical stack:** Python · pdfplumber · openpyxl · Windows batch · JSON configuration · AI-assisted development.
 
-**Publication status:** Sanitized showcase candidate. Public release should follow privacy, Windows execution and ownership/licensing review. No third-party supplier documents are supplied.
+**Publication status:** Sanitized showcase candidate. Windows execution has been tested; public release remains subject to final privacy and ownership/licensing review. No third-party supplier documents are supplied.
