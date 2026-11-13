@@ -4,7 +4,8 @@
 - [x] Check that generated per-run directories appear in `output/` without deleting prior results.
 - [ ] Decide code license (or leave unlicensed while private).
 - [x] Create and populate the private GitHub repository `ericgalvezz/supplier-document-automation`.
-- [ ] Final publication gate: inspect every staged file, external-facing claims, screenshots and Git history (initial sanitized-source checks completed).
+- [x] Targeted static source/assets and Git history privacy inspection completed 2026-11-13; repeat if any assets change.
+- [ ] Human sign-off on public disclosure and choice of copyright/license approach.
 - [ ] Decide if a short screen recording should be added after local Windows test.
 - [ ] Link the finished repository to Canva portfolio as a verified case study.
 
