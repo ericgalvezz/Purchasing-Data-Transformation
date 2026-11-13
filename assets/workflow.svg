@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 310" role="img" aria-label="Supplier PDFs to local validation and Excel workbook with three processing routes">
+<style>text{font-family:Arial,Helvetica,sans-serif} .node{fill:#f3f7fb;stroke:#bed1df;stroke-width:2} .title{fill:#123851;font-weight:bold;font-size:17px} .small{fill:#456477;font-size:13px} .arrow{stroke:#718c9f;stroke-width:3;fill:none;marker-end:url(#a)}</style>
+<defs><marker id="a" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8Z" fill="#718c9f"/></marker></defs>
+<rect width="1000" height="310" rx="18" fill="#ffffff"/>
+<rect class="node" x="25" y="60" width="170" height="85" rx="13"/><text class="title" x="110" y="96" text-anchor="middle">Supplier PDFs</text><text class="small" x="110" y="119" text-anchor="middle">Synthetic input</text>
+<path class="arrow" d="M197 103 H248"/>
+<rect class="node" x="250" y="60" width="200" height="85" rx="13"/><text class="title" x="350" y="95" text-anchor="middle">Local extraction</text><text class="small" x="350" y="119" text-anchor="middle">Text + fields</text>
+<path class="arrow" d="M451 103 H506"/>
+<rect class="node" x="510" y="60" width="195" height="85" rx="13"/><text class="title" x="608" y="94" text-anchor="middle">Validation</text><text class="small" x="608" y="119" text-anchor="middle">Confidence + rules</text>
+<path class="arrow" d="M707 103 H763"/>
+<rect class="node" x="765" y="60" width="208" height="85" rx="13"/><text class="title" x="870" y="94" text-anchor="middle">Structured Excel</text><text class="small" x="870" y="119" text-anchor="middle">Summary + details</text>
+<path class="arrow" d="M608 146 V184"/><path class="arrow" d="M608 183 H235 V203"/><path class="arrow" d="M608 183 V203"/><path class="arrow" d="M608 183 H840 V203"/>
+<rect x="130" y="205" width="210" height="62" rx="12" fill="#e8f3ef" stroke="#7faf99"/><text class="title" x="235" y="240" text-anchor="middle">Processed</text>
+<rect x="503" y="205" width="210" height="62" rx="12" fill="#fff5e5" stroke="#ddbb7d"/><text class="title" x="608" y="240" text-anchor="middle">Manual review</text>
+<rect x="735" y="205" width="210" height="62" rx="12" fill="#fcecec" stroke="#dfb0b0"/><text class="title" x="840" y="240" text-anchor="middle">Failed</text>
+</svg>

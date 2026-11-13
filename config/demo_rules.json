@@ -1,0 +1,143 @@
+{
+  "description": "Entirely fictional supplier and account mapping for open-source demonstration. NOT for actual bookkeeping.",
+  "suppliers": [
+    {
+      "name": "Oakridge Materials LLC",
+      "aliases": [
+        "Oakridge Materials LLC",
+        "Oakridge Materials"
+      ]
+    },
+    {
+      "name": "Coastal Panel Supply Co.",
+      "aliases": [
+        "Coastal Panel Supply Co",
+        "Coastal Panel Supply"
+      ]
+    },
+    {
+      "name": "Summit Hardware Ltd.",
+      "aliases": [
+        "Summit Hardware Ltd",
+        "Summit Hardware"
+      ]
+    }
+  ],
+  "codes": {
+    "general_materials": "6100",
+    "sheet_materials": "6110",
+    "hardware": "6120",
+    "finishing": "6130",
+    "other_materials": "6140",
+    "inventory_sheet": "1410",
+    "inventory_lumber": "1420",
+    "inventory_engineered": "1430"
+  },
+  "account_rules": [
+    {
+      "code": "6110",
+      "name": "Demo Sheet Materials",
+      "keywords": [
+        "plywood",
+        "mdf",
+        "melamine",
+        "particle board",
+        "panels",
+        "panel",
+        "sheet goods",
+        "sheet",
+        "veneer",
+        "maple",
+        "lumber",
+        "hardwood",
+        "engineered wood",
+        "pvc edge",
+        "edge band"
+      ],
+      "inventory_account": "1410"
+    },
+    {
+      "code": "6120",
+      "name": "Demo Hardware",
+      "keywords": [
+        "hinge",
+        "hinges",
+        "slide",
+        "slides",
+        "pull",
+        "pulls",
+        "screw",
+        "screws",
+        "bracket",
+        "brackets",
+        "clip",
+        "clips",
+        "handle",
+        "handles",
+        "knob",
+        "knobs",
+        "hardware",
+        "fastener"
+      ],
+      "inventory_account": ""
+    },
+    {
+      "code": "6130",
+      "name": "Demo Finishing",
+      "keywords": [
+        "paint",
+        "stain",
+        "lacquer",
+        "primer",
+        "thinner",
+        "sandpaper",
+        "finish",
+        "finishing",
+        "solvent"
+      ],
+      "inventory_account": ""
+    }
+  ],
+  "account_reference": [
+    {
+      "code": "6100",
+      "name": "Demo General Materials",
+      "use_when": "Illustrative direct material account; no specific rule."
+    },
+    {
+      "code": "6110",
+      "name": "Demo Sheet Materials",
+      "use_when": "Illustrative plywood, MDF, panels, and sheet goods."
+    },
+    {
+      "code": "6120",
+      "name": "Demo Hardware",
+      "use_when": "Illustrative handles, hinges, slides, and fasteners."
+    },
+    {
+      "code": "6130",
+      "name": "Demo Finishing",
+      "use_when": "Illustrative paints, stain and primer."
+    },
+    {
+      "code": "6140",
+      "name": "Other Demo Materials",
+      "use_when": "Fallback for unmatched demonstration materials."
+    },
+    {
+      "code": "1410",
+      "name": "Demo Inventory - Sheets",
+      "use_when": "Illustrative stock of sheet products."
+    },
+    {
+      "code": "1420",
+      "name": "Demo Inventory - Lumber",
+      "use_when": "Illustrative stock of hardwood lumber."
+    },
+    {
+      "code": "1430",
+      "name": "Demo Inventory - Engineered",
+      "use_when": "Illustrative stock of engineered wood."
+    }
+  ]
+}

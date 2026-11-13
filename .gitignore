@@ -1,0 +1,14 @@
+# Private operational material and generated data
+input/*
+!input/.gitkeep
+output/*
+!output/.gitkeep
+private_config/
+private_data/
+*.log
+__pycache__/
+*.py[cod]
+.env
+.env.*
+.DS_Store
+Thumbs.db
