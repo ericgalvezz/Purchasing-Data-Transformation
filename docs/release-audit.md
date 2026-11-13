@@ -31,3 +31,10 @@
 - Windows `.bat` smoke testing is **complete** for the tested Windows 11 setup; additional platform combinations are untested.
 - Final human review of disclosure and choice of code license.
 - Private GitHub staging is **complete**; public visibility has **not** been enabled.
+
+## Final pre-publication file and history inspection — 2026-11-13
+- Reviewed the current private repository tree and all 11 commit summaries. History begins with a newly authored showcase README; source and fixtures entered through a sanitized showcase upload, not a copied operational Git repository.
+- Scanned 18 text-based repository files for known real-supplier names, the operating company's name, internal family references, email addresses, secret-like strings, local user paths, and original material-account codes. No matches were found for those identifiers. The only URLs surfaced were public XML/OpenXML namespace URIs used for file formats.
+- Verified local binary fixture/image/workbook Git blob hashes match the versions on GitHub. The five readable supplier-style PDFs explicitly identify themselves as fictional; the image-only fixture has no selectable text; the seventh fixture is intentionally invalid.
+- Inspected synthetic XLSX package components: no external-link parts and no matches for known private identifiers. The README links point to paths present in the repository.
+- **Caveat:** This is a targeted privacy review of known identifiers and supplied test artifacts, not a legal warranty that no commercially sensitive facts could be inferred. Final human disclosure approval and license decision remain open.
