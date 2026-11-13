@@ -10,3 +10,10 @@
 - Added reproducible automated smoke test and release documentation.
 
 All demonstration invoices, account codes, suppliers, quantities and amounts are fictional.
+
+## Windows demo smoke test — 2026-11-13
+- Confirmed installation on Windows 11 with Python 3.13 and the Windows requirements launcher.
+- User ran seven synthetic PDF fixtures: five processed, one manual review and one intentional invalid-PDF failure.
+- Confirmed second run creates a new timestamped output folder while retaining the prior run.
+- Recorded user-verified workbook/folder outputs in `docs/validation-results.md`.
+- Repository remains private pending final disclosure and licensing review.
