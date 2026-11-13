@@ -15,8 +15,8 @@
 - [ ] Business owner confirms that public disclosure of the solution description is acceptable (where applicable).
 - [ ] Review source ownership and choose whether to add an open-source license.
 - [x] Run a Windows installation + execution smoke test (Windows 11, Python 3.13; user-confirmed 2026-11-13).
-- [ ] Run a full last-pass file/content inspection immediately before changing repository visibility to public.
-- [ ] Confirm no sensitive data in Git commit history, issues, releases, or screenshots.
+- [x] Run a targeted last-pass file/content inspection on 2026-11-13; repeat if any content changes before publication.
+- [x] Review currently available Git history, repository files and committed demonstration assets for known sensitive identifiers; repeat before public release if new assets or commits are added.
 
 ## Never commit
 
