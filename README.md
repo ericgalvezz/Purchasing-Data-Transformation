@@ -123,4 +123,3 @@ python -m unittest discover -s tests -v
 
 **Current boundaries:** No OCR for image-only PDFs, no direct accounting posting and no complete inventory system. Material/account suggestions require human review. The business identity and actual documents remain confidential.
 
-*Release state: Private showcase, pending final disclosure and licensing review.*
