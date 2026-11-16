@@ -1,33 +1,25 @@
 # Project status
 
-**Status:** Private GitHub showcase staged; Windows functional validation passed; public release not yet approved.
+**Status:** Portfolio showcase validated and approved for public release.
 
 ## Completed
-- Independent copy of the original extraction engine.
-- Fictional supplier and account configuration.
-- Seven synthetic test PDFs; no operational source documents.
-- Windows runner updated to keep results of prior executions.
-- Functional CLI test and repeat-run source-preservation test.
-- Professional README, business case, architecture, validation, privacy controls and roadmap.
-- Synthetic Excel output and preview image.
-- Private GitHub repository created and synchronized with the sanitized showcase.
-- Windows 11/Python 3.13 installation and two batch runs validated by user: 7 fixtures, 5 processed, 1 manual review, 1 intended failure; earlier run retained.
 
-## Before public release
-- Final privacy and Git history review, plus confirmation of safe public-facing wording.
-- Confirm source ownership and public code licensing preference.
-- Make public only after explicit final sign-off.
+- Rebuilt the public demonstration with entirely fictional suppliers, account rules and sample PDFs.
+- Retained a functional local Python engine, Excel reports, Windows launchers and exception handling.
+- Validated seven synthetic PDFs: **5 processed, 1 manual review, 1 intentional failure**.
+- Verified Windows 11 installation and two runs retaining the earlier output.
+- Documented the observed workflow improvement: **at least 16 hours/week of manual entry versus no more than 4 hours/week of review and correction** (~75% less hands-on work for the defined activity).
+- Presented the business problem, ownership, design decisions, constraints, implementation and potential next steps.
+- Completed a targeted source, demo and Git-history privacy audit.
+- Received authorization to disclose the **anonymous** case study.
 
-## Business impact documentation
+## Release approach
 
-- Recorded operating observations for the defined document workflow: at least 16 hours/week of manual entry before; up to 4 hours/week of review and correction afterward.
-- Communicated the conservative comparison as **approximately 75% less hands-on effort** (at least 12 hours/week), excluding unattended runtime and additional setup overhead.
-- Separated observed original-process impact from the seven-document public synthetic demonstration.
-- Clarified that deeper purchasing, accounting and inventory integrations are *future proposals*.
+- The business identity and its actual documents remain confidential.
+- The public repository contains fictional examples and sanitized, working code.
+- No open-source license is granted for this initial portfolio release; code rights are reserved.
+- Repository visibility is controlled by its owner in GitHub Settings.
 
-Repository URL/name and public visibility remain unchanged pending final editorial naming and disclosure review.
+## Optional enhancements after release
 
-## Editorial update — 2026-11-16
-- Simplified the README's opening for a general audience; kept the observed 16+ to ≤4-hour comparison and evidence links.
-- Expanded ownership and constraints in the business case, and technical requirement traceability in the architecture document.
-- Code, tests, fixtures, repo name and private visibility unchanged.
+A short screen demonstration using synthetic data; more test fixtures and extraction accuracy evidence; further impact measurement if available. These are not prerequisites for publication.

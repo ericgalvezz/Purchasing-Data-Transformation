@@ -31,3 +31,10 @@ All demonstration invoices, account codes, suppliers, quantities and amounts are
 - Expanded the independent business-case narrative, decisions and value-measurement method.
 - Added requirement-to-implementation and verification mapping in the technical architecture document.
 - Kept source code, test fixtures and technical behavior unchanged.
+
+## Public release preparation — 2026-11-16
+- Confirmed approval for publication of the anonymous business case.
+- Completed final targeted confidentiality and repository-history review.
+- Updated the release checklist, status and audit documentation for public-readiness.
+- Clarified that no open-source license is provided at initial release; source rights remain reserved.
+- Left the Python engine, test fixtures, README story and validated outputs unchanged.

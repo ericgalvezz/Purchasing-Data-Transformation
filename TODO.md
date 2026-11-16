@@ -1,21 +1,19 @@
-# Next actions
+# Portfolio release checklist
 
-- [x] Publish sanitized working code and fictional demonstrations to a **private** GitHub repository.
-- [x] Validate installation and two consecutive runs on Windows 11 (Python 3.13).
-- [x] Document the observed workflow comparison separately from the synthetic test results.
-- [x] Record the proposed future solution roadmap without presenting it as implemented.
-- [ ] Choose the final public-facing project title and repository name.
-- [x] Simplify README business story and clarify ownership/constraints in deeper documents.
-- [ ] Final human editorial and disclosure approval of narrative and operating metrics before public release.
-- [ ] Decide on source-code license (or initially keep rights reserved).
-- [ ] Obtain applicable approval for disclosure of the anonymous business case.
-- [ ] Add a short **synthetic-data-only** video/GIF walkthrough if it improves the presentation.
-- [ ] Conduct a final privacy/history check after editorial changes.
-- [ ] Change visibility to public **only after explicit sign-off** and link from Canva/LinkedIn.
+- [x] Prepare a working, sanitized demonstration without real supplier documents.
+- [x] Verify installation and execution on Windows 11.
+- [x] Separate real operational observations from synthetic demonstration outcomes.
+- [x] Explain the business problem, ownership, solution decisions, controls and roadmap in plain English.
+- [x] Validate README links, repository files and source configuration.
+- [x] Review available commit history and known sensitive identifiers.
+- [x] Obtain authorization to publicly disclose the anonymous business case.
+- [x] Decide initial licensing approach: no open-source license; rights reserved.
+- [ ] Change the repository visibility to **Public** in GitHub Settings.
+- [ ] Link the published case study from the LinkedIn and Canva portfolios.
 
-## Optional future product work (not required for portfolio)
+## Optional improvements (not needed for initial public release)
 
-- More supplier layouts, regression tests and local OCR.
-- Project ID and accounting export workflow.
-- Material inventory movements and reporting.
-- Broader adoption and end-to-end value measurement.
+- [ ] Add a short screen walkthrough using only fictional data.
+- [ ] Extend supplier-layout and accuracy regression tests.
+- [ ] Explore local OCR for scanned PDFs.
+- [ ] Explore project identifiers, accounting-ready exports and inventory movement workflows.

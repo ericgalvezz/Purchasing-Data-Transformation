@@ -1,25 +1,26 @@
-# Privacy and release review
+# Privacy and public-release checklist
 
-## Local audit performed
+This repository is a portfolio demonstration of an independently developed business-process solution. The actual operating company remains confidential.
 
-- [x] No uploaded real supplier PDFs copied into the showcase.
-- [x] Supplier names and aliases in code replaced by fictitious demonstration names.
-- [x] Example account codes are clearly fictitious and distinct from the original source configuration.
-- [x] Invoice numbers, amounts and document texts fabricated from scratch.
-- [x] Generated output workbook produced from synthetic fixture input only.
-- [x] Input, output and private configuration directories ignored by Git.
-- [x] Repository assembled in a new working folder rather than copied from the source project's Git history.
+## Data and source review
 
-## Publication requirements
+- [x] No real supplier or customer PDFs are included.
+- [x] Demonstration PDFs, names, invoice numbers, amounts and account codes were created with fictional values.
+- [x] Public supplier rules use `config/demo_rules.json` instead of the private business configuration.
+- [x] The example workbook is generated from synthetic documents only.
+- [x] Original source files and private operational records were not transferred into this Git repository.
+- [x] `input/`, `output/`, `private_config/` and `private_data/` are ignored by Git.
+- [x] The code, demo assets and available repository history were checked for known confidential identifiers.
+- [x] Windows 11 execution and preserved output runs were validated.
 
-- [ ] Business owner confirms that public disclosure of the solution description is acceptable (where applicable).
-- [ ] Review source ownership and choose whether to add an open-source license.
-- [x] Run a Windows installation + execution smoke test (Windows 11, Python 3.13; user-confirmed 2026-11-13).
-- [x] Run a targeted last-pass file/content inspection on 2026-11-13; repeat if any content changes before publication.
-- [x] Review currently available Git history, repository files and committed demonstration assets for known sensitive identifiers; repeat before public release if new assets or commits are added.
+## Disclosure and rights
 
-## Never commit
+- [x] Approval to publish the **anonymous business case** was confirmed by the project owner.
+- [x] For the first portfolio release, no open-source license is offered; no license file is included.
+- [x] The project documentation distinguishes observed operational results, reproducible synthetic tests and future proposals.
 
-Customer or supplier invoices, tax identifiers, business banking details, project estimates, operational accounting ledgers, original private config files, credentials or private user feedback.
+## Ongoing safeguard
 
-`gitignore` protection is helpful but insufficient: inspect staged changes before committing, and keep sensitive inputs outside the repo whenever possible.
+Do not commit customer/supplier invoices, prices from actual transactions, bank or tax identifiers, internal accounting exports, confidential user feedback, real project references or credentials. Always review new files before pushing changes.
+
+The targeted privacy audit is a documented control, not a guarantee that every possible disclosure risk has been eliminated.
