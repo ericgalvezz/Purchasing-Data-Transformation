@@ -35,21 +35,19 @@ Instead of entering every document manually, people can process a batch and conc
 
 ![PDF-to-data workflow](assets/workflow.svg)
 
-## My role: from problem to working solution
+## My Approach: Designing Around the Business, Not the Technology
 
-I examined the existing process, defined the requirements, designed the workflow, used AI coding tools to accelerate implementation, tested the result and created instructions for non-technical users.
+Before building anything, I looked at how the business handled supplier documents and where employees were spending their time.
 
-The most important decisions were based on how the business actually works:
+The challenge wasn't simply extracting information from PDFs. It was finding a way to reduce repetitive work without introducing new complexity or risks for the people using the solution.
 
-| What the business needed | How I designed for it |
-|---|---|
-| **Easy to use** | Familiar Windows folders, double-click launchers and Excel output |
-| **Safe handling of documents** | Keep originals untouched and create copies |
-| **Reliable review** | Separate uncertain PDFs and technical failures instead of accepting everything |
-| **Privacy** | Process files locally, without an external document-processing API |
-| **Useful data for future work** | Consistent fields and preliminary material categories for review |
+I translated that problem into a set of practical requirements: the tool needed to be simple enough for non-technical employees, keep sensitive documents on their computers, preserve original files, and identify uncertain results instead of treating every extraction as accurate.
 
-Those requirements shaped the solution as much as the code did. [Read the full approach and decision-making](docs/business-case.md).
+These requirements guided the design. I chose a local Windows workflow with Excel outputs, automated document organization, and a clear review process for exceptions.
+
+I then used AI-assisted development to build and refine the solution, tested its behavior, and prepared instructions so employees could use it independently.
+
+**The goal was not to automate everything. It was to automate the repetitive work while keeping people in control of decisions that require judgment.**
 
 ## See it in action
 
