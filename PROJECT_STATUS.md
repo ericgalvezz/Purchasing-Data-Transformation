@@ -17,3 +17,12 @@
 - Final privacy and Git history review, plus confirmation of safe public-facing wording.
 - Confirm source ownership and public code licensing preference.
 - Make public only after explicit final sign-off.
+
+## Business impact documentation
+
+- Recorded operating observations for the defined document workflow: at least 16 hours/week of manual entry before; up to 4 hours/week of review and correction afterward.
+- Communicated the conservative comparison as **approximately 75% less hands-on effort** (at least 12 hours/week), excluding unattended runtime and additional setup overhead.
+- Separated observed original-process impact from the seven-document public synthetic demonstration.
+- Clarified that deeper purchasing, accounting and inventory integrations are *future proposals*.
+
+Repository URL/name and public visibility remain unchanged pending final editorial naming and disclosure review.

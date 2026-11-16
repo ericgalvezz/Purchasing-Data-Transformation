@@ -17,3 +17,11 @@ All demonstration invoices, account codes, suppliers, quantities and amounts are
 - Confirmed second run creates a new timestamped output folder while retaining the prior run.
 - Recorded user-verified workbook/folder outputs in `docs/validation-results.md`.
 - Repository remains private pending final disclosure and licensing review.
+
+## Business case positioning — 2026-11-16
+
+- Reframed the README around the measured operational problem, solution decisions, user value and technical evidence.
+- Added observed time comparison for the specific workflow: ≥16 hours/week of manual entry versus ≤4 hours/week of review/corrections, or approximately 75% less hands-on effort.
+- Explicitly separated private operational observations from the public synthetic seven-PDF functional demonstration.
+- Expanded the independent-engagement narrative and future-stage purchasing/accounting/inventory roadmap without claiming implementation.
+- Left the underlying code, fixtures, repository name and private visibility unchanged.

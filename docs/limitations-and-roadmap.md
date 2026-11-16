@@ -1,29 +1,34 @@
 # Limitations and roadmap
 
-## Known limitations
+## Current capabilities and limits
 
-- Text-layer extraction only: image-only PDFs are not automatically OCR'd.
-- Some parsing logic is format-oriented and requires adjustment for new supplier templates.
-- Supplier recognition depends on illustrative aliases in the demo configuration.
-- Material/account suggestions use keywords and are not accounting or tax advice.
-- Inventory treatment cannot be inferred reliably from a supplier invoice alone.
-- No direct QuickBooks integration, customer Project matching, or complete job costing.
-- Error handling in workbook generation can fall back to reduced workbook formats if rich formatting fails.
-- No production-scale accuracy benchmark or measured savings.
-- Public demo contains synthetic documents only; it is not real business data.
+The local MVP reads selectable PDF text; it does **not** perform OCR on image-only documents. New supplier layouts may require additional parsing rules. Supplier aliases and account codes in the public showcase are fictional, and material/category suggestions require human review.
 
-## Recommended next stages
+The tool does not assign purchases to real QuickBooks Projects, post transactions, manage inventory balances, or calculate full project profitability. It is not an ERP replacement.
 
-**Operational:** Collect voluntary user feedback and measure baseline handling time, exception rates and data accuracy on a consented private dataset.
+The **observed hands-on time improvement** for the specific supplier-document entry/review activity is described in [the business case](business-case.md). That is separate from unmeasured full-workflow elapsed time, dollar-denominated ROI and broader business adoption. The public seven-PDF sample demonstrates technical behavior only, not production-scale extraction accuracy.
 
-**Extraction:** Extend supplier layouts with tests, add optional local OCR, strengthen line-item accuracy and make field-level confidence explicit.
+## Practical improvement path
 
-**Accounting readiness:** Add approved project IDs, cost-category review/approval, controlled export formatting and duplicate checks.
+### 1. Stabilize and measure
+- Capture weekly document volume and representative before/after workflow samples.
+- Measure human review effort, preparation, machine runtime and exception rates separately.
+- Expand field-level accuracy checks on permitted private data.
+- Collect end-user feedback and keep installation easy.
 
-**Inventory:** Define a material master, consistent units, actual stock-receipt/release records and reconciliation steps; accounting setup requires review by the business accountant.
+### 2. Extend extraction safely
+- Add supplier-specific layouts and regression tests.
+- Consider optional local OCR for image-only files.
+- Improve line-item parsing and confidence reporting.
 
-**Productization:** Add optional lightweight UI, clearer onboarding, error logs, release versioning and a regression test suite.
+### 3. Support accounting readiness
+- Introduce approved customer Project identifiers and duplicate checks.
+- Make material classification review and approval explicit.
+- Create controlled exports only after accounting-owner review.
 
-## Value-engineering checkpoints
+### 4. Explore inventory and reporting
+- Define materials and units consistently.
+- Link documented stock receipt and release events to jobs.
+- Build purchasing, exceptions and cost-visibility reporting if business priorities justify it.
 
-Measure the workflow before claiming ROI: time per document, time to retrieve files, percentage of manual-review cases, field completeness, classification acceptance and downstream project assignment coverage. Express results as measured vs. hypothesized.
+These are **potential stages**, not features already delivered. The business should prioritize them based on adoption, costs, data readiness and value.

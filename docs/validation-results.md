@@ -41,3 +41,12 @@ User-provided File Explorer screenshot shows **two distinct, retained run direct
 ## What this does *not* validate
 
 These fixtures do not demonstrate OCR performance, accuracy over a large supplier population, a representative production success rate, time savings, integration with QuickBooks or accounting correctness. The Windows launcher has now been exercised on one user's Windows 11 system. The test does not establish compatibility with every Windows/Python configuration.
+
+
+## Separate evidence: original operational workflow
+
+The private business engagement has a **measured minimum of 16 hours/week** of manual supplier-document entry, compared with an **observed maximum of 4 hours/week** for review and corrections after automation. This represents **at least 12 hours/week**, or **about 75%**, less *hands-on time for the defined activity* at the conservative comparison bounds.
+
+These operational figures were supplied from observed use and are **not calculated from the seven fictional PDFs**. Underlying private time records and supplier documents are not part of the public repository. Unattended machine runtime, any separate setup overhead, monetary savings and company-wide transformation are not asserted by this comparison.
+
+The synthetic Windows validation above independently confirms the **functionality of the public demonstration**, not the source of the operational productivity figures.
