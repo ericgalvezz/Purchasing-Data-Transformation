@@ -1,70 +1,94 @@
-# Business case — Purchasing Data Transformation
+# Business case: from a manual task to a working solution
 
-## Engagement context
+## The setting
 
-Independent solution-design and operational-improvement work for a **US-based custom manufacturing business**. The business relies on supplier documents for purchasing, material categorization and eventual project-cost review. The company's identity, supplier relationships and financial documents are intentionally not disclosed.
+This was an independent process-improvement project for a **US-based custom manufacturing business**. The business uses supplier documents to manage purchases of materials for customer jobs. Its identity and underlying commercial records remain confidential.
 
-The engagement focused on one concrete activity: turning incoming supplier PDFs into usable purchasing information. It was **not** a company-wide ERP or digital-transformation implementation.
+The project addressed a specific operational problem: getting useful purchasing information out of supplier PDFs without manually re-entering it document by document. It was not a company-wide ERP transformation.
 
-## Business problem and observed baseline
+## The problem and the opportunity
 
-Supplier invoices and orders arrived in varying PDF formats, creating repetitive data entry, inconsistent document naming and fragmented purchasing information.
+Supplier invoices and orders used different PDF layouts. Employees had to open documents, locate details, enter them into spreadsheets and keep the files organized. The **measured minimum workload was 16 hours per week of manual data entry** for this activity.
 
-The **measured minimum baseline was 16 hours of manual data entry per week** for this activity. The larger context is important: material purchases eventually need to be categorized, reviewed and connected with customer jobs or inventory decisions.
+I saw two opportunities:
 
-## Opportunity and solution approach
+- **Immediate:** reduce repetitive entry and allow staff to focus on checking exceptions.
+- **Future:** establish more consistent purchasing records that could support job costing, inventory and reporting later.
 
-The opportunity was to shift from file-by-file transcription toward batch processing, structured outputs and human-led exceptions.
+The second was a proposal for future development, not part of the initial delivered system.
 
-My contribution included:
-1. Understanding the purchasing process and its relationship with production and project costing.
-2. Translating business needs into field-extraction, routing, file-safety and usability requirements.
-3. Choosing a locally runnable workflow that nontechnical Windows users could operate.
-4. Using AI-assisted development to accelerate construction while reviewing the implementation and outputs.
-5. Validating results and writing user-facing instructions.
-6. Proposing a longer-term route to purchasing-data quality, accounting readiness and inventory visibility.
+## My role and approach
 
-### Key choices and rationale
+I worked across business analysis, solution design and implementation:
 
-| Decision | Business rationale |
-|---|---|
-| Local-first PDF processing | Preserve control of sensitive supplier documents and avoid an external processing dependency |
-| Excel as operational output | Deliver a familiar format users can inspect without a new platform |
-| `processed`, `manual_review`, `failed` | Focus people on exceptions rather than silently accepting unreliable extraction |
-| Copy, never destructively move originals | Protect source documents and improve traceability |
-| Suggestions, not accounting postings | Keep project allocation and inventory judgments with authorized reviewers |
+1. **Understand:** examined the purchasing-document process and its relationship to materials, customer projects and cost information.
+2. **Define:** specified the information to extract, output format, document handling, error routes and operating instructions.
+3. **Design:** prioritized an easy local Windows/Excel workflow and transparent human review instead of a complex new platform.
+4. **Implement:** guided development with AI coding tools, reviewed the logic and outputs, and iterated on the identified issues.
+5. **Validate:** tested the functional workflow with documents and prepared instructions for nontechnical users.
+6. **Look ahead:** proposed how structured purchasing data might later support project-cost assignment and inventory visibility.
 
-## Observed operational impact
+This engagement demonstrates ownership of a **focused operational improvement**, not ownership of a full digital transformation program.
 
-| Measure | Evidence and scope |
-|---|---|
-| Before | **≥16 hours/week** of manual supplier-document data entry (measured minimum) |
-| After | **≤4 hours/week** for review and corrections in the automated workflow (observed maximum) |
-| Difference | **≥12 hours/week** reduction between these active tasks |
-| Relative improvement | **~75% reduction** in hands-on effort at the conservative bounds |
+## Requirements and design choices
 
-**Method:** (16 − 4) ÷ 16 = 75%. The comparison concerns the defined manual entry/review activity and uses the minimum observed baseline and maximum observed post-automation review effort. It **does not** include unattended machine runtime, potential additional setup overhead or other downstream activities; those should be measured separately for an end-to-end elapsed-time calculation. The figures were reported from operational observation; original internal records are not published.
+| Requirement or constraint | Design decision | Why it mattered |
+|---|---|---|
+| Easy for nontechnical employees | Double-click Windows files and Excel output | Reduce training burden and avoid a new business system |
+| Keep supplier information private | Local PDF processing | Avoid sending documents to an outside processing API |
+| Never lose source records | Copy documents instead of moving or deleting originals | Traceability and recovery |
+| Uncertain PDFs need human judgment | `manual_review` route and confidence indicators | Avoid silently accepting incomplete extraction |
+| One bad PDF should not stop the batch | Separate `failed` route with notes | Continue processing other files |
+| Protect earlier output | Timestamped run folders | Avoid overwriting prior results |
+| Financial treatment needs approval | Material-account suggestions only | Leave project and inventory accounting decisions to people |
 
-This is an **observed process-level productivity result**, not a monetary ROI, a company-wide productivity increase or a measured labor-cost saving.
+See [Solution Architecture](solution-architecture.md) for the code, controls and tests that implement these requirements.
 
-## Delivered capability vs. public recreation
+## The delivered workflow
 
-**Delivered private initiative:** local PDF batch-processing workflow, structured Excel output, supplier file organization, confidence-based exception routing and user documentation. Actual business source documents are confidential.
+The user places PDFs in an input folder, runs the tool and reviews the generated Excel workbook. The program reads available text, extracts purchasing fields, creates organized copies and separates uncertain or unparseable documents.
 
-**Public GitHub reproduction:** functioning sanitized implementation with seven **entirely synthetic** PDFs, fictional supplier/account rules and a generated example workbook. Its validation proves reproducible technical behavior: five processed, one manual review and one intentionally invalid failure. The demo counts are not the source of the 16-to-4-hour operational comparison.
+Its Excel output contains supplier details, references, descriptions, amounts, classification suggestions, confidence flags and processing details.
 
-## Broader value and future roadmap
+The MVP produces **structured data for review**. It does not automatically allocate costs to a QuickBooks Project, manage inventory balances or post accounting transactions.
 
-The initiative illustrates a potential path from a focused manual-task improvement toward a better purchasing-data foundation:
+## Measured impact and method
 
-- **Current capability:** reduce repetitive entry, create consistent document records and surface exceptions.
-- **Proposed next step:** approved Project IDs, reviewed material categories and duplicate checks for accounting-ready exports.
-- **Longer-term possibility:** inventory-release records, project cost attribution and management reporting.
+The comparison covers the **hands-on supplier-document entry and review activity**, not the entire purchasing or accounting process.
 
-These downstream steps were **proposed**, not implemented as part of the MVP. The business would need to choose, fund and adopt them.
+| Measurement | Observed result |
+|---|---:|
+| Before: manual data entry | **At least 16 hours per week** |
+| After: reviewing and correcting automated output | **No more than 4 hours per week** |
+| Difference at conservative bounds | **At least 12 hours per week** |
+| Reduction in hands-on work | **Approximately 75%** |
 
-## Further measurement
+**Calculation:** (16 − 4) ÷ 16 = 75%.
 
-For fuller value engineering, document weekly volumes, time spent actively handling exceptions, automated runtime, preparation effort, field-level accuracy, user adoption and any maintenance burden. Monetary benefits would require actual labor-cost and process-cost inputs.
+The baseline uses the measured minimum for manual entry; the post-automation figure uses the observed maximum for checking and correcting output. These observations were supplied from the operating process; the underlying private records are not included in this repository.
 
-The solution creates review-ready data, **not** final journal entries, inventory balances, tax determinations or complete job margins.
+The comparison excludes unattended Python runtime and any separate setup or downstream work. It is **not** a monetary ROI calculation or a claim of a 75% productivity increase across the whole company.
+
+## Original initiative versus public demonstration
+
+**Original operating initiative:** local PDF processing, structured Excel output, supplier file organization, exception routing and user instructions for an actual business problem.
+
+**Public GitHub demonstration:** a working independent showcase with seven entirely fictional PDFs and fictional supplier/account rules. Five sample PDFs process automatically, one goes to manual review, and one deliberately invalid PDF demonstrates controlled failure handling. It was successfully run twice on Windows, with both output folders retained.
+
+The synthetic test counts **do not generate or substantiate the private 16-to-4-hour operational measurement**. They establish reproducible technical behavior.
+
+See [Validation Results](validation-results.md) for exact fixture-level scope.
+
+## The bigger opportunity
+
+I proposed extending the small, working automation in stages if the business wanted to invest further:
+
+- **Current:** consistent document handling, structured purchasing information and visible exceptions.
+- **Possible next step:** reviewed material classifications, approved project references and controlled accounting-ready exports.
+- **Long-term possibility:** inventory material movements, project cost visibility and management reporting.
+
+These future stages remain proposals. Their actual value would depend on adoption, integration cost, data accuracy and operating needs.
+
+## Additional value measurements
+
+A fuller assessment would capture weekly volumes, setup time, machine runtime, exception and error rates, field accuracy, ongoing maintenance and user adoption. To estimate monetary savings, it would also require verified labor and operating costs.

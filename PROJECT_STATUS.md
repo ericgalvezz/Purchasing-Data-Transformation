@@ -26,3 +26,8 @@
 - Clarified that deeper purchasing, accounting and inventory integrations are *future proposals*.
 
 Repository URL/name and public visibility remain unchanged pending final editorial naming and disclosure review.
+
+## Editorial update — 2026-11-16
+- Simplified the README's opening for a general audience; kept the observed 16+ to ≤4-hour comparison and evidence links.
+- Expanded ownership and constraints in the business case, and technical requirement traceability in the architecture document.
+- Code, tests, fixtures, repo name and private visibility unchanged.

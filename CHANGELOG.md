@@ -25,3 +25,9 @@ All demonstration invoices, account codes, suppliers, quantities and amounts are
 - Explicitly separated private operational observations from the public synthetic seven-PDF functional demonstration.
 - Expanded the independent-engagement narrative and future-stage purchasing/accounting/inventory roadmap without claiming implementation.
 - Left the underlying code, fixtures, repository name and private visibility unchanged.
+
+## Clearer business narrative and technical traceability — 2026-11-16
+- Simplified the README for nontechnical readers while preserving the measured process-level result.
+- Expanded the independent business-case narrative, decisions and value-measurement method.
+- Added requirement-to-implementation and verification mapping in the technical architecture document.
+- Kept source code, test fixtures and technical behavior unchanged.

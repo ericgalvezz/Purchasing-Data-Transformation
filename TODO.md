@@ -5,7 +5,8 @@
 - [x] Document the observed workflow comparison separately from the synthetic test results.
 - [x] Record the proposed future solution roadmap without presenting it as implemented.
 - [ ] Choose the final public-facing project title and repository name.
-- [ ] Review executive narrative, personal role description and operating metrics for public disclosure.
+- [x] Simplify README business story and clarify ownership/constraints in deeper documents.
+- [ ] Final human editorial and disclosure approval of narrative and operating metrics before public release.
 - [ ] Decide on source-code license (or initially keep rights reserved).
 - [ ] Obtain applicable approval for disclosure of the anonymous business case.
 - [ ] Add a short **synthetic-data-only** video/GIF walkthrough if it improves the presentation.

@@ -1,84 +1,128 @@
 # Purchasing Data Transformation
 
-**A business-led, tech-enabled process improvement case**  
-*Independent solution-design engagement · US custom manufacturing · Local automation · Operational data*
+**Turning hours of manual work into a simpler, automated purchasing process.**
 
-> **In brief:** Supplier-document data entry required **at least 16 hours of hands-on work per week**. I mapped the purchasing workflow and designed a local-first PDF automation MVP that converts documents into structured Excel data and directs uncertain cases to human review. In observed use, weekly review and corrections require **no more than 4 hours**. Comparing these defined activities indicates **at least 12 hours per week of repetitive manual effort redirected — approximately a 75% reduction**. The public implementation and its demonstration documents are fully synthetic and separate from the private operational evidence.
+*An independent process-improvement project for a US-based custom manufacturing business.*
 
-| Before: observed weekly baseline | After: observed weekly review/corrections | Hands-on time improvement |
+Every week, staff spent hours reading supplier PDFs, entering information into spreadsheets and organizing files. **I designed and delivered a tool to handle the repetitive steps automatically**, so people could focus on checking exceptions instead of copying data.
+
+### The result: about 75% less hands-on work
+
+| Before | After | Improvement |
 |---|---|---|
-| **16+ hours** of supplier-document data entry | **≤4 hours** of review and corrections | **~75% less** active effort; **12+ hours/week** redirected |
+| **16+ hours/week** manually entering supplier-document data | **Up to 4 hours/week** reviewing and correcting the output | **At least 12 hours/week** of manual effort reduced (**~75%**) |
 
-*Methodology: conservative comparison of the measured minimum manual-entry workload with the observed maximum post-automation review/correction workload for the corresponding activity. Unattended Python runtime and any additional setup time are excluded from this **hands-on effort** comparison; a full end-to-end elapsed-time metric should include them. This is operational time saved, not a measured monetary ROI.*
+These are observed figures for this **specific activity**, not a company-wide productivity claim. The comparison measures hands-on data entry versus hands-on review and corrections, not unattended processing or separate setup time. [See the measurement method](docs/business-case.md#measured-impact-and-method).
 
-## The business problem
+## The problem
 
-For a custom-manufacturing business, supplier invoices and orders arrive in different PDF layouts. Transcribing and organizing them manually uses employee time and makes it harder to consolidate purchasing information needed for downstream material-cost reviews.
+Supplier invoices and orders arrived as PDFs in different formats. Someone had to open each file, find the important details, enter them into Excel and organize the documents.
 
-The opportunity was not simply to extract text: it was to **replace repetitive entry with structured data and exception-based work**, without imposing a complicated new platform on nontechnical users.
+It was repetitive work, and the information was difficult to keep consistent and prepare for later purchasing and project-cost reviews.
 
-## My role and decisions
+**My question:** Could we automate most of this work without making the process harder for employees?
 
-I owned the business-to-solution work: understanding the purchasing-to-costing context, defining requirements and controls, coordinating AI-assisted implementation, testing behavior, documenting the workflow, and proposing the next operational steps.
+## What I built
 
-Three decisions shaped the MVP:
+I developed a Windows tool that:
 
-- **Local-first processing:** keep supplier files on the user's computer rather than sending them to an outside service.
-- **Human review by design:** automatically separate clear cases from uncertain and technically failed documents.
-- **Familiar delivery format:** produce organized copies and an Excel workbook instead of requiring users to adopt a new enterprise platform.
+1. **Reads batches of supplier PDFs** and extracts purchasing details.
+2. **Creates an Excel report** with summaries and detailed records.
+3. **Organizes document copies** in supplier folders with consistent names.
+4. **Flags uncertain results for human review** and separates files that cannot be processed.
 
-AI coding assistance accelerated implementation; business requirements, review criteria and validation remained part of my role.
-
-## The delivered solution
+Instead of entering every document manually, people can process a batch and concentrate on the files that need attention.
 
 ![PDF-to-data workflow](assets/workflow.svg)
 
-The Windows-based tool batch-processes supplier PDFs, extracts key purchasing details, creates consistent supplier folders and file names, and produces an Excel workbook with summary and detailed views (**34 data/control fields**). Originals remain untouched; each run preserves prior output folders.
+## My role: from problem to working solution
 
-The output includes preliminary material-category suggestions for human review. **It does not automatically post to QuickBooks or determine final accounting treatment.**
+I examined the existing process, defined the requirements, designed the workflow, used AI coding tools to accelerate implementation, tested the result and created instructions for non-technical users.
 
-## See it in action — reproducible public demo
+The most important decisions were based on how the business actually works:
 
-![Synthetic Excel summary](assets/summary-demo.png)
+| What the business needed | How I designed for it |
+|---|---|
+| **Easy to use** | Familiar Windows folders, double-click launchers and Excel output |
+| **Safe handling of documents** | Keep originals untouched and create copies |
+| **Reliable review** | Separate uncertain PDFs and technical failures instead of accepting everything |
+| **Privacy** | Process files locally, without an external document-processing API |
+| **Useful data for future work** | Consistent fields and preliminary material categories for review |
 
-All public PDFs, vendors, invoice values, account codes and workbook entries were **created from scratch as fictional examples**. They are not anonymized originals.
+Those requirements shaped the solution as much as the code did. [Read the full approach and decision-making](docs/business-case.md).
 
-| Synthetic demonstration | Verified result |
+## See it in action
+
+![Excel report generated with fictional supplier data](assets/summary-demo.png)
+
+This repository contains a **working demonstration using fictional documents created from scratch**. It does not contain real supplier invoices, commercial amounts or private configurations.
+
+| Public demo check | Result |
 |---|---:|
-| Total fixture PDFs | 7 |
+| Fictional PDFs tested | 7 |
 | Processed automatically | 5 |
-| Routed to manual review | 1 |
-| Routed to failed (intentionally invalid PDF) | 1 |
-| Output data/control fields | 34 |
+| Sent for manual review | 1 |
+| Intentionally invalid PDF handled as a failure | 1 |
 
-The demonstration was tested locally and on Windows 11 with Python 3.13. Two consecutive Windows runs produced separate retained output folders. These synthetic results **demonstrate tool behavior, not the company's observed productivity improvement or an industry-wide automation rate**.
+The demo was also run twice successfully on Windows 11, retaining the output from both runs. **These tests show how the tool works; they are separate from the observed operational time savings.**
 
-**Explore:** [sample files and output](demo/) · [validation evidence](docs/validation-results.md) · [business case](docs/business-case.md)
+[Explore sample PDFs and Excel output](demo/) · [See validation details](docs/validation-results.md)
 
 ## Where this could go next
 
-The MVP solves a focused document-handling problem and creates a useful foundation for broader improvement *if the business chooses to invest further*:
+The first goal was to reduce time spent entering supplier data. I also proposed how this could become the starting point for broader operational improvements if the business chooses to expand it.
 
-**Validated today:** batch extraction → standardized purchasing workbook → supplier filing → exception review  
-**Potential next phase:** approved project identifiers → cost-classification review → controlled accounting-ready exports  
-**Longer-term opportunities:** inventory material movement, project-cost visibility and management reporting
+**Working today:** PDF processing → organized supplier information → Excel report → exception review
 
-Those integrations are **proposed future capabilities**, not current features.
+**Possible next step:** reviewed material categories and project references → controlled accounting-ready exports
+
+**Longer-term opportunity:** better links between purchasing, inventory movements, project costs and reporting
+
+Those later integrations were **proposals**, not features already delivered. [Explore the roadmap](docs/limitations-and-roadmap.md).
+
+---
 
 ## Technical deep dive
 
-**Stack:** Python, pdfplumber, openpyxl, Windows batch files and JSON configuration.
+This implementation is available for technical review. It uses **Python, pdfplumber, openpyxl, Windows batch files and JSON configuration**.
 
-**Try on Windows:** install Python 3, double-click `Install Requirements.bat`, copy the fictional PDFs from `demo/fixtures/` into `input/`, run `Run PDF Extraction.bat`, and open the latest `output/run_.../extraction_report.xlsx`.
+### Run the demonstration on Windows
 
-**Run tests:** `python -m unittest discover -s tests -v`.
+1. Install Python 3 so `py` or `python` is available.
+2. Double-click `Install Requirements.bat`.
+3. Copy the fictional PDFs from `demo/fixtures/` into `input/`.
+4. Double-click `Run PDF Extraction.bat`.
+5. Open `output/run_.../extraction_report.xlsx` and the `processed/`, `manual_review/` and `failed/` folders.
 
-- [Technical design and safeguards](docs/solution-architecture.md)
-- [Validation details and scope of evidence](docs/validation-results.md)
-- [Business case, decisions and measurement](docs/business-case.md)
-- [Limitations and future roadmap](docs/limitations-and-roadmap.md)
-- [Privacy and release checklist](docs/privacy-checklist.md)
+Each run creates a new output folder. Original input files remain unchanged.
 
-**Current boundaries:** no OCR for image-only PDFs, no direct accounting integration and no complete inventory management. Supplier and material rules in the public version are illustrative.
+### Run from the command line
 
-**Release state:** Private showcase candidate. The business identity and original documents remain confidential. Public publication still requires final disclosure and licensing decisions.
+```bash
+python -m pip install -r requirements.txt
+python src/extract_pdf_fields.py \
+  --input demo/fixtures \
+  --output-root output/demo-run \
+  --output extraction_report.xlsx \
+  --scan-policy manual_review
+```
+
+Use a fresh `--output-root` for an independent CLI run.
+
+### Run the automated test
+
+```bash
+python -m unittest discover -s tests -v
+```
+
+### Further reading
+
+- **[Architecture, requirements and safeguards](docs/solution-architecture.md):** how the requirements map to code, controls and tests
+- **[Business case and decisions](docs/business-case.md):** my role, approach and impact calculation
+- **[Validation and reproducibility](docs/validation-results.md):** the fictional test cases and Windows verification
+- **[Limitations and roadmap](docs/limitations-and-roadmap.md):** what is and is not implemented
+- **[Privacy and release checklist](docs/privacy-checklist.md):** publication controls
+
+**Current boundaries:** No OCR for image-only PDFs, no direct accounting posting and no complete inventory system. Material/account suggestions require human review. The business identity and actual documents remain confidential.
+
+*Release state: Private showcase, pending final disclosure and licensing review.*
